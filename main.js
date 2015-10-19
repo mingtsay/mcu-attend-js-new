@@ -1,7 +1,7 @@
-/* MCU Attend, Version 0.10.0 */
+/* MCU Attend, Version 1.0.0 */
 /* This script release under LGPL License */
 
-var mcu_attend_version = "0.10.1";
+var mcu_attend_version = "1.0.0";
 var target_window = (typeof window.mainFrame === 'undefined' ? window : window.mainFrame);
 var target_document = target_window.document;
 
@@ -247,12 +247,12 @@ if (typeof window.mainFrame !== 'undefined') {
                 "}" +
             "", target_document);
 
-            if($(target_document).find("form td").length == 0) {
+            if($(target_document).find("form #ctl00_ContentPlaceHolder1_PnlStno table table td").length == 0) {
                 window.alert("唱名系統載入失敗，請確認您所開啟的頁面是否為銘傳的點名考勤系統！");
                 return;
             }
 
-            $(target_document).find("form td").mouseover(function() {
+            $(target_document).find("form #ctl00_ContentPlaceHolder1_PnlStno table table td").mouseover(function() {
                 $(this).addClass("hover");
             }).mouseout(function() {
                 $(this).removeClass("hover");
@@ -263,8 +263,8 @@ if (typeof window.mainFrame !== 'undefined') {
                 var name = $(t).attr("mcu_attend_name");
                 $(input).focus();
             }).each(function() {
-                var sid = $(this).find("input")[0].value;
-                var name = $($(this)[0]).text().trim().substr(sid.length).trim();
+                var sid = $(this).find("label").text().trim().substr(0, 8);
+                var name = $(this).find("label").text().trim().substr(sid.length).trim();
                 var btn_replay = "<a href=\"javascript:replay('" + sid + "','" + name + "', " + mcu_attend_list.length + ");\"><img border=\"0\" width=\"16px\" height=\"16px\" src=\"https://mt.rmstudio.tw/mcu_attend/images/replay.png\" title=\"重新播放音訊檔案\" alt=\"replay\" /></a>";
                 var btn_regen = "<a href=\"javascript:regen('" + sid + "');\"><img border=\"0\" width=\"16px\" height=\"16px\" src=\"https://mt.rmstudio.tw/mcu_attend/images/regen.png\" title=\"重新產生音訊檔案\" alt=\"regen\" /></a>";
                 var btn_change = "<a href=\"javascript:change('" + sid + "','" + name + "');\"><img border=\"0\" width=\"16px\" height=\"16px\" src=\"https://mt.rmstudio.tw/mcu_attend/images/change.png\" title=\"修改發音內容\" alt=\"change\" /></a>";
@@ -272,14 +272,15 @@ if (typeof window.mainFrame !== 'undefined') {
                 $(this).attr("mcu_attend_index", mcu_attend_list.length);
                 $(this).attr("mcu_attend_sid", sid);
                 $(this).attr("mcu_attend_name", name);
+                $(this).addClass("mcu_attend_students");
                 mcu_attend_list.push(this);
             });
 
-            $(target_document).find("form td input").focus(function() {
-                $(this).parents("td").addClass("focus");
+            $(target_document).find("form #ctl00_ContentPlaceHolder1_PnlStno table td input").focus(function() {
+                $(this).parents("td.mcu_attend_students").addClass("focus");
                 global_now_index = parseInt($(this).parents("td").attr("mcu_attend_index"), 10);
             }).blur(function() {
-                $(this).parents("td").removeClass("focus");
+                $(this).parents("td.mcu_attend_students").removeClass("focus");
                 if (global_now_index == parseInt($(this).parents("td").attr("mcu_attend_index"), 10)) {
                     global_now_index = -1;
                 }
@@ -358,7 +359,7 @@ if (typeof window.mainFrame !== 'undefined') {
                 e.preventDefault();
             });
 
-            $(target_document).find("form").prepend("<div id=\"mcu_attend\">外掛已載入：<a href=\"https://mt.rmstudio.tw/mcu_attend\" target=\"_blank\" title=\"瀏覽唱名程式專案網頁（另開新視窗）\">唱名程式</a> v" + mcu_attend_version + " Developed by Ming Tsay. 2013-2015</div><a  id=\"mcu_attend_keyboard\" href=\"javascript:toggle_keyboard();\">鍵盤對應功能表（展開/收回）<div id=\"mcu_attend_keyboard_content\" class=\"toggle_hidden\"><ul><li>方向鍵：不播放選擇學生</li><li>Space：選取/取消選取目前學生缺席</li><li>Tab/N/K：播放下一位學生姓名</li><li>Shift+Tab/B/H：播放上一位學生姓名</li><li>V/J：播放目前學生姓名</li></ul></div></a><div id=\"mcu_attend_reverse\">您可以先選取有出席的學生並點選 <a href=\"javascript:reverse();\">反向選取</a> 來選擇缺課的學生。</div><div id=\"mcu_attend_player\"><a href=\"javascript:player();\">播放所有缺席學生姓名</a> / <a href=\"javascript:player_stop();\">停止播放</a> / <label><input id=\"mcu_attend_player_checkbox\" type=\"checkbox\" /> 勾選時唸出「沒來」</label></div>");
+            $(target_document).find("form #ctl00_ContentPlaceHolder1_PnlStno").prepend("<div id=\"mcu_attend\">外掛已載入：<a href=\"https://mt.rmstudio.tw/mcu_attend\" target=\"_blank\" title=\"瀏覽唱名程式專案網頁（另開新視窗）\">唱名程式</a> v" + mcu_attend_version + " Developed by Ming Tsay. 2013-2015</div><a  id=\"mcu_attend_keyboard\" href=\"javascript:toggle_keyboard();\">鍵盤對應功能表（展開/收回）<div id=\"mcu_attend_keyboard_content\" class=\"toggle_hidden\"><ul><li>方向鍵：不播放選擇學生</li><li>Space：選取/取消選取目前學生缺席</li><li>Tab/N/K：播放下一位學生姓名</li><li>Shift+Tab/B/H：播放上一位學生姓名</li><li>V/J：播放目前學生姓名</li></ul></div></a><div id=\"mcu_attend_reverse\">您可以先選取有出席的學生並點選 <a href=\"javascript:reverse();\">反向選取</a> 來選擇缺課的學生。</div><div id=\"mcu_attend_player\"><a href=\"javascript:player();\">播放所有缺席學生姓名</a> / <a href=\"javascript:player_stop();\">停止播放</a> / <label><input id=\"mcu_attend_player_checkbox\" type=\"checkbox\" /> 勾選時唸出「沒來」</label></div>");
 
             window.alert(
                 "唱名程式 v" + mcu_attend_version + "已成功載入！\n\n" +

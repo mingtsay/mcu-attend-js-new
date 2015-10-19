@@ -1,0 +1,200 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><base href="https://tch.mcu.edu.tw/teaATT_abs/" />
+<title>
+    26平時點名系統(新)
+</title><link href="App_Themes/MasterPage1/AspCss.css" type="text/css" rel="stylesheet" /><link href="App_Themes/MasterPage1/Body.css" type="text/css" rel="stylesheet" /><link href="App_Themes/MasterPage1/controls.css" type="text/css" rel="stylesheet" /><link href="App_Themes/MasterPage1/page.css" type="text/css" rel="stylesheet" /><style type="text/css">
+    .ctl00_MenuNet_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+    .ctl00_MenuNet_1 { font-family:Arial;text-decoration:none; }
+    .ctl00_MenuNet_2 { font-family:Arial; }
+
+</style></head>
+<body>
+<body style="text-align: center" >
+    <form name="aspnetForm" method="post" action="ATTW2.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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Nei2meWBpeWuiREwMzA1MDI2NOWNk+iCsuWykREwMzA1MDQzM+eoi+e+qeWHsREwMzA1MDQ0Muadjuafj+W+uREwMzA1MDQ4NeWtq+aYjueOiREwMzA1MDUxM+W8teiqjOaBkhEwMzA1MDYwMuWQs+S6keaWuREwMzA1MDY4Mem7g+almumclhEwMzA1MDcxNueOi+WutuaFthEwMzA1MDc1MuadjuaMr+WuhxEwMzA1MDc2MeadjuWTsuWEgBEwMzA1MDgwNeael+mhpei7khEwMzA1MDgxNOWRqOaAoeWQmxEwMzA1MDkwM+adjuaHv+WuuA8wMzA1MDk1Nee+hSDmj5oRMDMwNTEwODLlvpDjgIDmtakRMDMwNTExMDHlvLXogIDlgYkRMDMwNTExNTPprY/mlofkv64RMDMwNTExNjLmnpfpnZbmloczMDMwNTMwMjDolKHmmI7oq7ogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMzAzMDUzMDM26Zmz5p+P55GLICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMwMzA1MzA0Neadjuafj+iruiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICARMDMzNjAwMTTpmbPln7nnkYsRMDMzNjAyMzXprY/lro/kv64RMDMzNjAyOTbmvZjlhqDovrARMDMzNjAzMjTmnpflu7rlrocRMDMzNjAzNTHpu4PlmInlgYkRMDMzNjA0NDDmm77pg4Hlh7ERMDMzNjA0ODPmuLjmmYnnkZ4RMDMzNjA1NjPlvLXlpKnoi7ERMDMzNjA3NDHpmbPlrqPku7sRMDMzNjA4MDPoqLHnq6PmmboRMDMzNjA4MjHnjovmm4nnkKoRMDMzNjA4NTXmnpflk7LpoI4RMDMzNjExMjTmnpfoqannqY4RMDMzNjExNzbpmbPlhqDlop4zMDMzNjI0MTLppqzmlrDlrocgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMzAzMzYyNDIx5p6X44CA6KyZICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMwNDM2MjM4M+ael+WRiOmIuiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzOTgwOTAyNzLoqLHmg5/oqZUgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgFTMIMDExMzMwNDQIMDEyMzAyODIIMDEyMzA5MDMIMDIwNTExMTEIMDIzNjA4NjUIMDIzNjMwNTMIMDMwNTAwMTYIMDMwNTAwNDMIMDMwNTAxMDUIMDMwNTAxNTAIMDMwNTAyMjEIMDMwNTAyNTUIMDMwNTAyNjQIMDMwNTA0MzMIMDMwNTA0NDIIMDMwNTA0ODUIMDMwNTA1MTMIMDMwNTA2MDIIMDMwNTA2ODEIMDMwNTA3MTYIMDMwNTA3NTIIMDMwNTA3NjEIMDMwNTA4MDUIMDMwNTA4MTQIMDMwNTA5MDMIMDMwNTA5NTUIMDMwNTEwODIIMDMwNTExMDEIMDMwNTExNTMIMDMwNTExNjIIMDMwNTMwMjAIMDMwNTMwMzYIMDMwNTMwNDUIMDMzNjAwMTQIMDMzNjAyMzUIMDMzNjAyOTYIMDMzNjAzMjQIMDMzNjAzNTEIMDMzNjA0NDAIMDMzNjA0ODMIMDMzNjA1NjMIMDMzNjA3NDEIMDMzNjA4MDMIMDMzNjA4MjEIMDMzNjA4NTUIMDMzNjExMjQIMDMzNjExNzYIMDMzNjI0MTIIMDMzNjI0MjEIMDQzNjIzODMIOTgwOTAyNzIUKwMzZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZGQCFg8PFgIfAWVkZAIYDw8WAh8BBQcxMDQxMjk2ZGQCGg8PFgIfAQUBQ2RkAhwPDxYCHwVoZBYCAgEPPCsADQBkAhEPDxYCHwEFPOWmguacieebuOmXnOWVj+mhjOiri+a0veiqsuWLmee1hFRFTO+8mjI4ODI0NTY06L2J5YiG5qmfMjU4M2RkGAIFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxY0BSRjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJENoa0xTdG5vJDAFJGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMQUkY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRDaGtMU3RubyQyBSRjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJENoa0xTdG5vJDMFJGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNAUkY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRDaGtMU3RubyQ1BSRjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJENoa0xTdG5vJDYFJGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNwUkY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRDaGtMU3RubyQ4BSRjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJENoa0xTdG5vJDkFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMTAFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMTEFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMTIFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMTMFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMTQFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMTUFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMTYFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMTcFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMTgFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMTkFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMjAFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMjEFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMjIFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMjMFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMjQFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMjUFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMjYFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMjcFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMjgFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMjkFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMzAFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMzEFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMzIFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMzMFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMzQFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMzUFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMzYFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMzcFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMzgFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kMzkFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNDAFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNDEFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNDIFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNDMFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNDQFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNDUFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNDYFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNDcFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNDgFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNDkFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNTAFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hrTFN0bm8kNTAFImN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkR3JkVkF0dDIPZ2SoUQIAC0FCEiKaW/pSvo4TgKAy2w==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/teaAtt_abs/WebResource.axd?d=-OOTAS2wz67naK92k85kp45m0g3kHFYzw-O7MEMJkkcLMGkSrxSl3y2B776ZBISb4PaPWK0oMN8QqIeTgGVk0cR_5-s1&amp;t=635588912026805809" type="text/javascript"></script>
+
+
+<script src="/teaAtt_abs/WebResource.axd?d=eeqZdir0tWUUjuseU673Q2WheSwehdPYmPnSLoFvI5pScX9gv7Y6vy05uv9st8fWUCOIrDKo8zAvyNkoVmGEaLTs95w1&amp;t=635588912026805809" type="text/javascript"></script>
+<div>
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="28152702" />
+</div>
+    <div  style="text-align:center;"   >
+    <table style="width: 98%; margin-top: 0px; height: 95%;" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="500px" height="30" align="left" style="width: 300px"><img id="ctl00_ImgSysNm" src="App_Themes/images/ATT-WEB.jpg" style="border-width:0px;" /></td>
+                <td width="300px" colspan="2" ><div align="left"><span id="ctl00_LblEmp" class="Label">1041296   歐陽雍</span>
+                    
+                    
+                    
+                    </div></td>
+            <tr>
+            <td colspan="3" style="height: 12px">
+            <div align="center">
+                  <table id="ctl00_MenuNet" class="ctl00_MenuNet_2" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_MenuNetn0"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+                <td style="white-space:nowrap;"><a class="ctl00_MenuNet_1" href="ATTW2.aspx">點名資料輸入</a></td>
+            </tr>
+        </table></td><td style="width:3px;"></td><td><img src="App_Themes/images/LinkSpace.gif" alt="" /></td><td onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_MenuNetn1"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+                <td style="white-space:nowrap;"><a class="ctl00_MenuNet_1" href="ATTW1.aspx">設定點名代理人</a></td>
+            </tr>
+        </table></td><td style="width:3px;"></td><td><img src="App_Themes/images/LinkSpace.gif" alt="" /></td><td onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_MenuNetn2"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+                <td style="white-space:nowrap;"><a class="ctl00_MenuNet_1" href="ATTW3.aspx">點名結果查詢</a></td>
+            </tr>
+        </table></td><td style="width:3px;"></td><td><img src="App_Themes/images/LinkSpace.gif" alt="" /></td><td onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_MenuNetn3"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+                <td style="white-space:nowrap;"><a class="ctl00_MenuNet_1" href="ATTW4.aspx">點名更正</a></td>
+            </tr>
+        </table></td><td style="width:3px;"></td><td><img src="App_Themes/images/LinkSpace.gif" alt="" /></td><td onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_MenuNetn4"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+                <td style="white-space:nowrap;"><a class="ctl00_MenuNet_1" href="abs_w3.aspx">公假請假</a></td>
+            </tr>
+        </table></td><td><img src="App_Themes/images/LinkSpace.gif" alt="" /></td>
+    </tr>
+</table>
+               </div>
+            </td>
+        </tr>
+          <tr>
+            <td colspan="3"><div align="left"> <img src="App_Themes/images/topline.jpg" /></div></td>
+          </tr>        
+        <tr>
+            <td colspan="3"  valign="top" style="height: 90%"  >
+            <br />
+            
+<div align="center">
+    <table align="center" width="650px">
+    <tr>
+    <th><span id="ctl00_ContentPlaceHolder1_Label6" class="Label" style="font-family:PMingLiU;">【點名資料輸入】</span></th>
+    </tr>
+    <tr>
+    <td>
+        <div align="center"><div align="center">
+          
+        </div></div>
+    </td>
+    </tr>    
+    <tr>
+    <td>
+        <div align="center"><div align="center">
+          <span id="ctl00_ContentPlaceHolder1_LblClsCnm" class="Notes">01240          /01206應用英文三</span>
+          　<span id="ctl00_ContentPlaceHolder1_LblDateMsg" class="Notes">日期:</span><span id="ctl00_ContentPlaceHolder1_LblDate" class="Notes">1020</span>　<span id="ctl00_ContentPlaceHolder1_LblWkMsg" class="Notes">週別 :</span><span id="ctl00_ContentPlaceHolder1_LblWk" class="Notes">06</span>　<span id="ctl00_ContentPlaceHolder1_LblDayMsg" class="Notes">星期:</span><span id="ctl00_ContentPlaceHolder1_LblDay" class="Notes">2</span></div></div>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <div align="center">
+        
+    
+</div>
+</td>
+</tr>
+<tr>
+<td>
+    <div id="ctl00_ContentPlaceHolder1_PnlStno" style="width:700px;">
+    
+        <table align="center" class="table_style" width="100%">
+  <tr>
+      <th>
+          <span id="ctl00_ContentPlaceHolder1_LblSecMsg" class="Label">節次:</span><span id="ctl00_ContentPlaceHolder1_LblSec" class="Label">06</span>&nbsp;
+          <input type="submit" name="ctl00$ContentPlaceHolder1$BtnSaveStno1" value="存檔" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$BtnSaveStno1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_BtnSaveStno1" class="Button" />
+          <span id="ctl00_ContentPlaceHolder1_Label3" class="Label">請點選缺席學生之座位</span></th>
+  </tr>
+  <tr>
+    <td >
+    <div align="center">
+        <table id="ctl00_ContentPlaceHolder1_ChkLStno" border="0" style="color:Black;border-width:0px;border-style:None;font-family:PMingLiU;width:110px;">
+        <tr>
+            <td><input id="ctl00_ContentPlaceHolder1_ChkLStno_0" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$0" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_0">01133044李天宇                                  </label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_1" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$1" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_1">01230282黃正憲                                  </label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_2" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$2" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_2">01230903蕭培健                                  </label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_3" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$3" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_3">02051111陳旻鈺                                  </label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_4" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$4" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_4">02360865邱顯耕                                  </label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_5" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$5" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_5">02363053蔡璨名                                  </label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_6" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$6" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_6">03050016謝旻蓁</label></td>
+        </tr><tr>
+            <td><input id="ctl00_ContentPlaceHolder1_ChkLStno_7" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$7" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_7">03050043李聿宸</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_8" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$8" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_8">03050105李浩誠</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_9" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$9" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_9">03050150許庭瑋</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_10" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$10" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_10">03050221胡定澤</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_11" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$11" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_11">03050255趙健安</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_12" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$12" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_12">03050264卓育岑</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_13" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$13" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_13">03050433程義凱</label></td>
+        </tr><tr>
+            <td><input id="ctl00_ContentPlaceHolder1_ChkLStno_14" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$14" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_14">03050442李柏徹</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_15" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$15" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_15">03050485孫明玉</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_16" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$16" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_16">03050513張誌恒</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_17" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$17" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_17">03050602吳云方</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_18" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$18" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_18">03050681黃楚霖</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_19" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$19" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_19">03050716王家慶</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_20" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$20" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_20">03050752李振宇</label></td>
+        </tr><tr>
+            <td><input id="ctl00_ContentPlaceHolder1_ChkLStno_21" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$21" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_21">03050761李哲儀</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_22" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$22" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_22">03050805林顥軒</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_23" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$23" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_23">03050814周怡君</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_24" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$24" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_24">03050903李懿宸</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_25" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$25" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_25">03050955羅 揚</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_26" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$26" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_26">03051082徐　浩</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_27" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$27" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_27">03051101張耀偉</label></td>
+        </tr><tr>
+            <td><input id="ctl00_ContentPlaceHolder1_ChkLStno_28" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$28" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_28">03051153魏文修</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_29" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$29" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_29">03051162林靖文</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_30" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$30" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_30">03053020蔡明諺                                  </label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_31" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$31" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_31">03053036陳柏瑋                                  </label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_32" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$32" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_32">03053045李柏諺                                  </label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_33" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$33" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_33">03360014陳培瑋</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_34" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$34" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_34">03360235魏宏修</label></td>
+        </tr><tr>
+            <td><input id="ctl00_ContentPlaceHolder1_ChkLStno_35" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$35" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_35">03360296潘冠辰</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_36" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$36" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_36">03360324林建宇</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_37" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$37" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_37">03360351黃嘉偉</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_38" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$38" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_38">03360440曾郁凱</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_39" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$39" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_39">03360483游晉瑞</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_40" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$40" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_40">03360563張天英</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_41" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$41" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_41">03360741陳宣任</label></td>
+        </tr><tr>
+            <td><input id="ctl00_ContentPlaceHolder1_ChkLStno_42" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$42" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_42">03360803許竣智</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_43" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$43" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_43">03360821王曉琪</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_44" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$44" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_44">03360855林哲頎</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_45" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$45" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_45">03361124林詩穎</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_46" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$46" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_46">03361176陳冠增</label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_47" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$47" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_47">03362412馬新宇                                  </label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_48" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$48" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_48">03362421林　謙                                  </label></td>
+        </tr><tr>
+            <td><input id="ctl00_ContentPlaceHolder1_ChkLStno_49" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$49" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_49">04362383林呈鈺                                  </label></td><td><input id="ctl00_ContentPlaceHolder1_ChkLStno_50" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkLStno$50" /><label for="ctl00_ContentPlaceHolder1_ChkLStno_50">98090272許惟評                                  </label></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+    </table>
+    </div>
+    </td>
+  </tr>
+  <tr >
+      <td >
+      <div align="center"><input type="submit" name="ctl00$ContentPlaceHolder1$BtnSaveStno" value="存檔" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$BtnSaveStno&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_BtnSaveStno" class="Button" />
+          <input type="submit" name="ctl00$ContentPlaceHolder1$BtnCls2" value="選擇班級" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$BtnCls2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_BtnCls2" class="Button" />
+          <input type="submit" name="ctl00$ContentPlaceHolder1$BtnSec2" value="選擇節次" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$BtnSec2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_BtnSec2" class="Button" />
+          <input type="submit" name="ctl00$ContentPlaceHolder1$BtnAll1" value="登記全到" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$BtnAll1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_BtnAll1" class="Button" />
+          </div>
+      </td>
+  </tr>
+</table>
+
+</div>
+</td>
+</tr>
+</table> 
+    <span id="ctl00_ContentPlaceHolder1_LblMsg" class="ErrorMessage"></span>&nbsp;&nbsp;
+        
+              
+ </div>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="height: 12px"><div  align="center"> <span id="ctl00_LblDeptTel" class="Label">如有相關問題請洽課務組TEL：28824564轉分機2583</span></div></td>
+        </tr>
+    </table>
+    </div>
+    <br />
+    
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_MenuNet_Data = new Object();
+ctl00_MenuNet_Data.disappearAfter = 2000;
+ctl00_MenuNet_Data.horizontalOffset = 0;
+ctl00_MenuNet_Data.verticalOffset = 0;
+ctl00_MenuNet_Data.iframeUrl = '/teaAtt_abs/WebResource.axd?d=0QNE0cklfnH_HybYtE4ggq21TDFFqY4WNAsG0oEm6JsoyEe3B3ZtfYMU-4gjDIbTB0ZPBVDSwWNqsRU4dv0HwxOVdV01&t=635588912026805809';
+//]]>
+</script>
+</form>
+</body>
+</html>
+
